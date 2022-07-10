@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 65efe787601c9a2438eb578cc0ebc162
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - BBB Simulator
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 82ee2f9a6d3916f499a2b4566b38f486, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

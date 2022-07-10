@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: cc0e08a3dade61649a5348c3442eca43
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - BBB Simulator
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 82ee2f9a6d3916f499a2b4566b38f486, type: 3}
+  - {fileID: 12800000, guid: 65efe787601c9a2438eb578cc0ebc162, type: 3}
+  - {fileID: 12800000, guid: 269f6ff4470c1e242b0aead34ab9e847, type: 3}
+  - {fileID: 12800000, guid: 99f98fc3cdf871c459a3ca956ee2fbd9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
