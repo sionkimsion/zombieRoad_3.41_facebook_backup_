@@ -103,6 +103,7 @@ MonoBehaviour:
   isChase: 0
   blood: {fileID: 7871364288532964892, guid: 9e153c811161bdb4da5d37bb294ace23, type: 3}
   bubble: {fileID: 7871364288532964892, guid: 8a60061561705f24fbac2ba0aa921372, type: 3}
+  iceBreak: {fileID: 5368919208182483897, guid: bc8528b46d7be9f47a1cfdbf9822636f, type: 3}
   speed: 1
   anim: {fileID: 2561499073970346731}
 --- !u!50 &6343305465381676304
