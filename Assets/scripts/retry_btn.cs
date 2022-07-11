@@ -12,6 +12,5 @@ public class retry_btn : MonoBehaviour
     public void OnClickRetry()
     {
         Retry();
-        Debug.Log("¿ÁΩ√¿€");
     }
 }

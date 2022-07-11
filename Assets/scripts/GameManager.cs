@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public bool gameOver = false;
     public GameObject gameOverPNG;
     public GameObject retry;
+    public GameObject bestScoreUI;
+    public GameObject gameOverUI;
     public Animator PlayerAnim;
 
     void Awake()
@@ -44,6 +46,8 @@ public class GameManager : MonoBehaviour
         if (gameOver) {
             gameOverPNG.SetActive(true);
             retry.SetActive(true);
+            bestScoreUI.SetActive(true);
+            gameOverUI.SetActive(true);
             PlayerAnim.SetBool("isDie", true);
             Invoke("dead", 0.1f);
         }

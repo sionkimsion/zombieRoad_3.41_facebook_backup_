@@ -6,7 +6,7 @@ public class ItemSpawn : MonoBehaviour
 {
     public GameObject[] items;
     private GameObject[] spawnPoints;
-    int destroyTime = 17;
+    int destroyTime = 16;
 
     
 
@@ -19,7 +19,7 @@ public class ItemSpawn : MonoBehaviour
     {
         GameObject spawnedObject;
 
-        // ¾ÆÀÌÅÛ È®·ü
+        // í­íƒ„ ì•„ì´í…œ í™•ë¥ 
         int randNo = Random.Range(0, items.Length);
         if (randNo == 3 && Random.Range(0, 100) < 5) {
             return;
