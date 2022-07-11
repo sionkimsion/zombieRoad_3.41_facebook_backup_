@@ -55,7 +55,7 @@ public class shield : MonoBehaviour
 
     void bigShieldOff()
     {
-        gameObject.transform.localScale = new Vector3(0.6f, 0.6f, 0);
+        gameObject.transform.localScale = new Vector3(0.55f, 0.55f, 0);
     }
 
     void strongerOff()

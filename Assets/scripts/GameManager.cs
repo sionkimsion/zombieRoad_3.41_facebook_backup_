@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using Facebook.Unity;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,7 +23,6 @@ public class GameManager : MonoBehaviour
     {
         gm = this;
         Application.targetFrameRate =60;
-        FB.Init(InitCallback, OnHideUnity);
     }
 
     void Start()
@@ -62,18 +60,4 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f;
     }
 
-    private void InitCallback ()
-    {
-        if (FB.IsInitialized) {
-            Debug.Log("Facebook SDK initialized");
-
-            FB.ActivateApp();
-        } else {
-            Debug.Log("Failed to Initialize the Facebook SDK");
-        }
-    }
-
-    private void OnHideUnity (bool isGameShown)
-    {
-    } 
 }

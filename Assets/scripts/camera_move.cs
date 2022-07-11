@@ -5,12 +5,15 @@ using UnityEngine;
 public class camera_move : MonoBehaviour
 {
     public float speed;
+    // public GameObject rink;
 
     void Awake()
     {
         Application.targetFrameRate =60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
 
+
+        // 9:16 비율에 맞게 자르기
         Camera camera = GetComponent<Camera>();
         Rect rect = camera.rect;
         float scaleheight = ((float)Screen.width / Screen.height) / ((float)9 / 16); // (가로 / 세로)
@@ -27,6 +30,11 @@ public class camera_move : MonoBehaviour
         }
         camera.rect = rect;
     }
+
+    /* void Start () {
+        // 좌우에 맞게 카메라 줌
+        Camera.main.orthographicSize = rink.transform.localScale.x * Screen.height / Screen.width * 0.5f; 
+	} */
 
     void OnPreCull() => GL.Clear(true, true, Color.black);
 

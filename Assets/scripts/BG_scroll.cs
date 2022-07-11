@@ -16,7 +16,6 @@ public class BG_scroll : MonoBehaviour
         gameObject.transform.position = new Vector3 (0, y, transform.position.z);
     }
 
-    // Update is called once per frame
     void Update()
     {
         offset += Time.deltaTime * speed;
