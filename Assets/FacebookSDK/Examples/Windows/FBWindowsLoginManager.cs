@@ -91,33 +91,17 @@ public class FBWindowsLoginManager : MonoBehaviour
             }
             else
             {
-                Logger.DebugLog("UserID: " + result.CurrentProfile.UserID);
-                Logger.DebugLog("Name: " + result.CurrentProfile.Name);
-                Logger.DebugLog("First Name: " + result.CurrentProfile.FirstName);
-                Logger.DebugLog("Email: " + result.CurrentProfile.Email);
-                Logger.DebugLog("ImageURL: " + result.CurrentProfile.ImageURL);
-                GetUserLocale();
+                Logger.DebugLog(result.CurrentProfile.UserID);
+                Logger.DebugLog(result.CurrentProfile.Name);
+                Logger.DebugLog(result.CurrentProfile.FirstName);
+                Logger.DebugLog(result.CurrentProfile.Email);
+                Logger.DebugLog(result.CurrentProfile.ImageURL);
 
                 UserName.text = result.CurrentProfile.Name + " " + result.CurrentProfile.LastName;
                 if (result.CurrentProfile.ImageURL != "" && result.CurrentProfile.ImageURL != null)
                 {
                     StartCoroutine(LoadPictureFromUrl(result.CurrentProfile.ImageURL, UserImage));
                 }
-            }
-        });
-    }
-
-    public void GetUserLocale()
-    {
-        FB.GetUserLocale((ILocaleResult result) =>
-        {
-            if (result.Error != null)
-            {
-                Logger.DebugErrorLog("Error getting user locale: " + result.Error);
-            }
-            else
-            {
-                Logger.DebugLog("User Locale: " + result.Locale);
             }
         });
     }

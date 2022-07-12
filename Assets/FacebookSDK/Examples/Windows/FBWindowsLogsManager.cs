@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI;
 
 #if UNITY_EDITOR
@@ -8,7 +10,6 @@ using UnityEditor;
 public class FBWindowsLogsManager : MonoBehaviour
 {
     public Text LogText;
-    public ScrollRect ScrollView;
 
     void Awake()
     {
@@ -25,29 +26,20 @@ public class FBWindowsLogsManager : MonoBehaviour
     public void DebugLog(string message)
     {
         LogText.text += "<color=white>" + message + "</color> \n";
-        ScrollToTheBottom();
     }
 
     public void DebugErrorLog(string message)
     {
         LogText.text += "<color=red>" + message + "</color> \n";
-        ScrollToTheBottom();
     }
 
     public void DebugWarningLog(string message)
     {
         LogText.text += "<color=yellow>" + message + "</color> \n";
-        ScrollToTheBottom();
     }
 
     public void DebugClean()
     {
         LogText.text = "";
-    }
-
-    private void ScrollToTheBottom()
-    {
-        ScrollView.verticalNormalizedPosition = 0;
-        Canvas.ForceUpdateCanvases();
     }
 }

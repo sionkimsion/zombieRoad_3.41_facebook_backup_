@@ -112,7 +112,7 @@ namespace Facebook.Unity.Example
 
             if (this.Button("Limited Login + Hometown"))
             {
-                this.CallFBLogin(LoginTracking.LIMITED, new HashSet<Scope> { Scope.PublicProfile, Scope.UserHometown });
+                this.CallFBLogin(LoginTracking.LIMITED, new HashSet<Scope> { Scope.PublicProfile | Scope.UserHometown });
             }
 
             GUILayout.EndHorizontal();
@@ -120,7 +120,7 @@ namespace Facebook.Unity.Example
 
             if (this.Button("Limited Login + Gender"))
             {
-                this.CallFBLogin(LoginTracking.LIMITED, new HashSet<Scope> { Scope.PublicProfile, Scope.UserGender });
+                this.CallFBLogin(LoginTracking.LIMITED, new HashSet<Scope> { Scope.PublicProfile | Scope.UserGender });
             }
 
 
@@ -187,11 +187,6 @@ namespace Facebook.Unity.Example
                 this.SwitchMenu(typeof(AccessTokenMenu));
             }
 
-            if (this.Button("UploadToMediaLibrary"))
-            {
-                this.SwitchMenu(typeof(UploadToMediaLibrary));
-            }
-            
             GUILayout.EndVertical();
 
             GUI.enabled = enabled;
