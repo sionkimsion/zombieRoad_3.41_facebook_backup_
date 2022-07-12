@@ -12,7 +12,7 @@ public class BG_scroll : MonoBehaviour
     {
         render = GetComponent<MeshRenderer>();
 
-        float y = Random.Range(-23f, 23f);
+        float y = Random.Range(-20f, 20f);
         gameObject.transform.position = new Vector3 (0, y, transform.position.z);
     }
 

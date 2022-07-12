@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 755627430106479360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.42, y: 0.42, z: 0}
+  m_LocalScale: {x: 0.37, y: 0.37, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,6 @@ MonoBehaviour:
   isChase: 0
   blood: {fileID: 7871364288532964892, guid: 9e153c811161bdb4da5d37bb294ace23, type: 3}
   bubble: {fileID: 7871364288532964892, guid: 8a60061561705f24fbac2ba0aa921372, type: 3}
-  iceBreak: {fileID: 5368919208182483897, guid: bc8528b46d7be9f47a1cfdbf9822636f, type: 3}
   speed: 0.78
   anim: {fileID: -5706023913430584394}
 --- !u!95 &-5706023913430584394

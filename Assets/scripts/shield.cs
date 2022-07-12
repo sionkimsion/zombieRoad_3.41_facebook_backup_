@@ -10,6 +10,8 @@ public class shield : MonoBehaviour
     public GameObject boom;
     public Animator anim;
 
+    public ParticleSystem ice;
+
     Vector3 curPos;
     Vector3 newPos;
     
@@ -55,7 +57,7 @@ public class shield : MonoBehaviour
 
     void bigShieldOff()
     {
-        gameObject.transform.localScale = new Vector3(0.6f, 0.6f, 0);
+        gameObject.transform.localScale = new Vector3(0.5f, 0.5f, 0);
     }
 
     void strongerOff()
@@ -88,7 +90,7 @@ public class shield : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "bigShield") {
-            gameObject.transform.localScale = new Vector3(1.0f, 1.0f, 0);
+            gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0);
             Invoke("bigShieldOff", itemTime);
         } 
         else if (collision.gameObject.tag == "stronger") {

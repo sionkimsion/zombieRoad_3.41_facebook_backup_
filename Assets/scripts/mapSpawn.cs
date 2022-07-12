@@ -20,6 +20,6 @@ public class mapSpawn : MonoBehaviour
         GameObject spawnedObject;
         spawnedObject = Instantiate(enemies[Random.Range(0, enemies.Length)], spawn.transform.position, Quaternion.identity) as GameObject;
 
-        Debug.Log(spawnedObject + "°¡ »ı¼ºµÇ¾ú½À´Ï´Ù.");
+        Debug.Log(spawnedObject + "ê°€ ìƒì„± ë˜ì—ˆìŠµë‹ˆë‹¤.");
     }
 }

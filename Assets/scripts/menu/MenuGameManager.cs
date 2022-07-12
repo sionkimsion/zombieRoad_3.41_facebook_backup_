@@ -13,6 +13,7 @@ public class MenuGameManager : MonoBehaviour
     void Awake()
     {
         Application.targetFrameRate =60;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
         FB.Init(InitCallback, OnHideUnity);
     }
 

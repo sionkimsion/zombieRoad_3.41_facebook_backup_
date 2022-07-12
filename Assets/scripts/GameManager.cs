@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     {
         gm = this;
         Application.targetFrameRate =60;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     void Start()

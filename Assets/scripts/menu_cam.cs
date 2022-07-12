@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camera_move : MonoBehaviour
+public class menu_cam : MonoBehaviour
 {
-    public float speed;
-    // public GameObject rink;
-
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
         // 9:16 비율에 맞게 자르기
         Camera camera = GetComponent<Camera>();
@@ -27,15 +25,11 @@ public class camera_move : MonoBehaviour
         camera.rect = rect;
     }
 
-    /* void Start () {
-        // 좌우에 맞게 카메라 줌
-        Camera.main.orthographicSize = rink.transform.localScale.x * Screen.height / Screen.width * 0.5f; 
-	} */
-
     void OnPreCull() => GL.Clear(true, true, Color.black);
 
+    // Update is called once per frame
     void Update()
     {
-        transform.position += new Vector3(0, speed * Time.deltaTime, 0); 
+        
     }
 }
