@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CT10QYWNN",
         "name": "com.SionKim.ZombieRoad",
-        "processId": 17726,
+        "processId": 15173,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,6 +12,18 @@
             "deviceId": "R3CT10QYWNN",
             "name": "com.SionKim.ZombieRoad",
             "processId": 17726,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CT10QYWNN",
+            "name": "com.luutinhit.ioslauncher:ios_launcher",
+            "processId": 28444,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT10QYWNN",
+            "name": "com.SionKim.ZombieRoad",
+            "processId": 15173,
             "exited": false
         }
     ],
@@ -23,7 +35,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": true
+                "m_Selected": false
             },
             {
                 "m_Name": "",
@@ -39,7 +51,7 @@
             },
             {
                 "m_Name": "Unity",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "CRASH",
