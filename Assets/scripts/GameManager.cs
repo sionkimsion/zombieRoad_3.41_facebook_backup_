@@ -29,17 +29,17 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         initGame();
-        bestScore.text = PlayerPrefs.GetFloat("bestScore", 0).ToString("N0"); 
+        bestScore.text = PlayerPrefs.GetFloat("bestScore", 0).ToString("N0").Replace(",", ""); 
     }
 
     void Update()
     {
         meter += Time.deltaTime * 5;
-        meterText.text = meter.ToString("N0");
+        meterText.text = meter.ToString("N0").Replace(",", "");
 
         if (meter > PlayerPrefs.GetFloat("bestScore", 0)) {
             PlayerPrefs.SetFloat("bestScore", meter);
-            bestScore.text = meter.ToString("N0");
+            bestScore.text = meter.ToString("N0").Replace(",", "");
         }
 
         if (gameOver) {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class retry_btn : MonoBehaviour
+public class button : MonoBehaviour
 {
     void Retry()
     {

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Facebook.Unity;
-
+using UnityEngine.SceneManagement;
 
 
 public class MenuGameManager : MonoBehaviour
@@ -20,7 +20,10 @@ public class MenuGameManager : MonoBehaviour
     void Update()
     {
         Invoke("bloodAnim", 0.25f);
-        Invoke("startBtn", 0.25f);
+        Invoke("startImg", 0.3f);
+        if ((Input.GetMouseButtonDown(0)) && start.activeSelf == true){
+            SceneManager.LoadScene("MainScene");
+        }
     }
 
     void bloodAnim ()
@@ -28,7 +31,7 @@ public class MenuGameManager : MonoBehaviour
         anim.SetBool("blood", true);
     }
 
-    void startBtn() 
+    void startImg() 
     {
         start.SetActive(true);
     }

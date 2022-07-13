@@ -63,7 +63,7 @@ public class Enemy_nMove : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.name == "shield") {
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
             blood.transform.localScale = transform.localScale * 2.5f;
             Instantiate(blood, transform.position, transform.rotation);
         } else if (collision.gameObject.tag == "playerShield") {
@@ -73,7 +73,7 @@ public class Enemy_nMove : MonoBehaviour
 
         if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         }
     }
 
@@ -86,7 +86,7 @@ public class Enemy_nMove : MonoBehaviour
 
         if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         }
     }
 
@@ -94,7 +94,7 @@ public class Enemy_nMove : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         } else {
             SR.material.shader = shaderSpritesDefault;
             SR.color = defaultColor;

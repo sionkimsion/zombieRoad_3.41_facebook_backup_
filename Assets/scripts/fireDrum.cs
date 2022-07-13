@@ -28,7 +28,7 @@ public class fireDrum : MonoBehaviour
             SR.color = Color.white;
         } else if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         } else if (!(collision.gameObject.tag == "shield")) {
             anim.SetBool("boom", true);
             Destroy(gameObject, 0.5f);
@@ -42,7 +42,7 @@ public class fireDrum : MonoBehaviour
             SR.color = Color.white;
         } else if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         } 
     }
 
@@ -50,7 +50,7 @@ public class fireDrum : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         } else {
             SR.material.shader = shaderSpritesDefault;
             SR.color = defaultColor;

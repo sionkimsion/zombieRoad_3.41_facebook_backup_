@@ -111,12 +111,12 @@ public class enemies : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D collision)
     {   
         if (collision.gameObject.name == "shield") {
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
             blood.transform.localScale = transform.localScale * 2.5f;
             Instantiate(blood, transform.position, transform.rotation);
         } else if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         } else if (collision.gameObject.tag == "playerShield") {
             bubble.transform.localScale = transform.localScale * 2.5f;
             Instantiate(bubble, transform.position, transform.rotation);
@@ -130,7 +130,7 @@ public class enemies : MonoBehaviour {
             SR.color = Color.white;
         } else if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         }
     }
 
@@ -138,7 +138,7 @@ public class enemies : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player") {
             SR.material.shader = shaderGUItext;
-            SR.color = Color.red;
+            SR.color = new Color(230/255f, 0, 0);
         } else {
             SR.material.shader = shaderSpritesDefault;
             SR.color = defaultColor;
