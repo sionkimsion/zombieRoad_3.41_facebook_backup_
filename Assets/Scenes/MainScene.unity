@@ -804,7 +804,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &815994662
 Transform:
   m_ObjectHideFlags: 0
@@ -833,7 +833,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemies:
-  - {fileID: 2758425141824242021, guid: c00e813a80ed41747b293eaf27e8a054, type: 3}
+  - {fileID: 2758425141824242021, guid: cb58cbdf2cabdc74d88f10fbd218c26e, type: 3}
   startTime: 0
   nextTime: 18
 --- !u!1 &925153897
@@ -1942,7 +1942,7 @@ GameObject:
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1802292780
 Transform:
   m_ObjectHideFlags: 0
@@ -1981,6 +1981,9 @@ MonoBehaviour:
   - {fileID: 7908019875668987417, guid: 786a015226d0f244098598b91d57126f, type: 3}
   - {fileID: 5922180009027982797, guid: 1e1b255456ee7ba488db2aeff3023c74, type: 3}
   - {fileID: 7769662561182315030, guid: a70fe06e9b4ba6e45a8a9907a8ed65a6, type: 3}
+  - {fileID: 2758425141824242021, guid: c00e813a80ed41747b293eaf27e8a054, type: 3}
+  - {fileID: 2758425141824242021, guid: cb58cbdf2cabdc74d88f10fbd218c26e, type: 3}
+  - {fileID: 4757599238789699503, guid: 74a38d0b47dbf31409518d0ceb66c3c0, type: 3}
   startTime: 0
   nextTime: 17
 --- !u!4 &1817961399 stripped
