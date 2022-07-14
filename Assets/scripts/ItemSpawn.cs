@@ -6,7 +6,7 @@ public class ItemSpawn : MonoBehaviour
 {
     public GameObject[] items;
     private GameObject[] spawnPoints;
-    int destroyTime = 16;
+    float destroyTime = 16;
 
     
 

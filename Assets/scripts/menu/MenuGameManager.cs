@@ -9,6 +9,7 @@ public class MenuGameManager : MonoBehaviour
 {
     public Animator anim;
     public GameObject start;
+    public GameObject startBtn;
 
     void Awake()
     {
@@ -20,10 +21,7 @@ public class MenuGameManager : MonoBehaviour
     void Update()
     {
         Invoke("bloodAnim", 0.25f);
-        Invoke("startImg", 0.3f);
-        if ((Input.GetMouseButtonDown(0)) && start.activeSelf == true){
-            SceneManager.LoadScene("MainScene");
-        }
+        Invoke("startImg", 0.25f);
     }
 
     void bloodAnim ()
@@ -34,6 +32,7 @@ public class MenuGameManager : MonoBehaviour
     void startImg() 
     {
         start.SetActive(true);
+        startBtn.SetActive(true);
     }
 
     private void InitCallback ()
