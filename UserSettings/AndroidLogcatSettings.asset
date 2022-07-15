@@ -3,7 +3,7 @@
     "m_SelectedPackage": {
         "deviceId": "R3CT10QYWNN",
         "name": "com.SionKim.ZombieRoad",
-        "processId": 15173,
+        "processId": 20815,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -24,6 +24,12 @@
             "deviceId": "R3CT10QYWNN",
             "name": "com.SionKim.ZombieRoad",
             "processId": 15173,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CT10QYWNN",
+            "name": "com.SionKim.ZombieRoad",
+            "processId": 20815,
             "exited": false
         }
     ],

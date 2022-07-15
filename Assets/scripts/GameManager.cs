@@ -24,6 +24,15 @@ public class GameManager : MonoBehaviour
         gm = this;
         Application.targetFrameRate =60;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
+        if(gm == null)
+        {
+            gm = this;
+        } 
+        else if (gm != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     void Start()

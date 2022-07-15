@@ -18,7 +18,7 @@ TagManager:
   - stopEnemy
   - fireDrum
   - freeze
-  - enemyInMap
+  - mapSpawn
   layers:
   - Default
   - TransparentFX

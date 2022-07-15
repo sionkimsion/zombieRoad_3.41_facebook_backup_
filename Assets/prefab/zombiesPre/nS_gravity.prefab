@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 6640140636188965366}
   - component: {fileID: 6640140636188965367}
+  - component: {fileID: 6640140636188965370}
   - component: {fileID: 6640140636188965368}
   - component: {fileID: 6640140636188965369}
-  - component: {fileID: 6640140636188965370}
   - component: {fileID: 755044735705959154}
   m_Layer: 8
   m_Name: nS_gravity
@@ -88,6 +88,24 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6640140636188965370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6640140636188965371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 390ae3ae60f8b5b46b3c87cf31ea062a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isChase: 0
+  blood: {fileID: 7871364288532964892, guid: 9e153c811161bdb4da5d37bb294ace23, type: 3}
+  bubble: {fileID: 7871364288532964892, guid: 8a60061561705f24fbac2ba0aa921372, type: 3}
+  anim: {fileID: 755044735705959154}
+  speed: 1
+  gravity: 0.4
 --- !u!50 &6640140636188965368
 Rigidbody2D:
   serializedVersion: 4
@@ -102,7 +120,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0.8
-  m_AngularDrag: 20
+  m_AngularDrag: 1
   m_GravityScale: 0.4
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -135,21 +153,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.2485547, y: 1.6618499}
   m_EdgeRadius: 0
---- !u!114 &6640140636188965370
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6640140636188965371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 390ae3ae60f8b5b46b3c87cf31ea062a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blood: {fileID: 7871364288532964892, guid: 9e153c811161bdb4da5d37bb294ace23, type: 3}
-  bubble: {fileID: 7871364288532964892, guid: 8a60061561705f24fbac2ba0aa921372, type: 3}
-  anim: {fileID: 755044735705959154}
 --- !u!95 &755044735705959154
 Animator:
   serializedVersion: 4

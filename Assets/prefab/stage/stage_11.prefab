@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 7906434010158491800}
   m_Layer: 13
   m_Name: 4
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 7906434010165132404}
   m_Layer: 13
   m_Name: 2
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 7906434010171668300}
   m_Layer: 13
   m_Name: 5
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 7906434011019032662}
   m_Layer: 13
   m_Name: 7 (1)
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,7 +183,7 @@ GameObject:
   - component: {fileID: 7906434011274848911}
   m_Layer: 13
   m_Name: 3
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -270,7 +270,7 @@ GameObject:
   - component: {fileID: 7906434011420733116}
   m_Layer: 13
   m_Name: 2 (1)
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -301,7 +301,7 @@ GameObject:
   - component: {fileID: 7906434011422240280}
   m_Layer: 13
   m_Name: 1
-  m_TagString: enemyInMap
+  m_TagString: enemySpawn
   m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -4,22 +4,38 @@ using UnityEngine;
 
 public class mapSpawn : MonoBehaviour
 {
-    public GameObject[] enemies;
-    private GameObject spawn;
+    [SerializeField] private List<GameObject> maps;
 
-    public float startTime;
-    public float nextTime;
+    private List<int> _pickedMaps = new();
 
-    void Start()
+    [SerializeField] private float speed;
+    [SerializeField] private float countNum;
+
+    private void Start()
     {
-        spawn = GameObject.FindGameObjectWithTag("enemySpawn");
-        InvokeRepeating("SpawnEnemy", startTime, nextTime);
+        StartCoroutine(GenerateMap());
     }
-    void SpawnEnemy()
-    {
-        GameObject spawnedObject;
-        spawnedObject = Instantiate(enemies[Random.Range(0, enemies.Length)], spawn.transform.position, Quaternion.identity) as GameObject;
 
-        Debug.Log(spawnedObject + "가 생성 되었습니다.");
+    private IEnumerator GenerateMap()
+    {
+        while (!(GameManager.gm.gameOver))
+        {
+            var count = maps.Count; // 맵의 갯수
+            int idx;
+            while (true) {
+                idx = Random.Range(0, count);
+                if (!_pickedMaps.Contains(idx)) break; // 같은 숫자 아닐 때까지 뽑기
+            }
+
+            idx = Random.Range(0, count);
+
+            _pickedMaps.Add(idx); // 뽑은 숫자 뽑은 리스트에 넣기
+            Instantiate(maps[idx], transform.position, Quaternion.identity); // 해당 인덱스 맵 생성
+
+            Debug.Log(maps[idx].name);
+            yield return new WaitForSeconds(speed); // 17초
+
+            if (_pickedMaps.Count > count / countNum) _pickedMaps = new(); // 일정 숫자 이상 뽑혔으면 뽑은 리스트 초기화 1/3이나 1/2 정도가 좋을듯
+        }
     }
 }

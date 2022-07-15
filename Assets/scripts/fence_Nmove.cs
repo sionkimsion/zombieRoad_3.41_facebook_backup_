@@ -16,7 +16,6 @@ public class fence_Nmove : MonoBehaviour
         if (collision.gameObject.name == "enemy_destroyer_bottom") {
             gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             Destroy(gameObject);
-            Debug.Log("fenceNmove destroyed with " + collision.gameObject.name);
         }
     }
 }

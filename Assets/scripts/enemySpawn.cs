@@ -16,7 +16,7 @@ public class enemySpawn : MonoBehaviour
 
     void Start()
     {
-        spawnPoints = GameObject.FindGameObjectsWithTag("enemyInMap");
+        spawnPoints = GameObject.FindGameObjectsWithTag("enemySpawn");
         InvokeRepeating("SpawnEnemy", startTime, nextTime);
     }
     void SpawnEnemy()

@@ -69,9 +69,9 @@ public class enemies : MonoBehaviour {
                     RD.position = Vector3.MoveTowards(RD.position, moveTo, speed * Time.deltaTime);
                 } else {
                     moveTo = player.transform.position;
-                    RD.position = Vector3.MoveTowards(RD.position, moveTo, speed * Time.deltaTime);   
+                    RD.position = Vector3.MoveTowards(RD.position, moveTo, speed * Time.deltaTime);
                 }
-            } 
+            }
         }
     }
     
