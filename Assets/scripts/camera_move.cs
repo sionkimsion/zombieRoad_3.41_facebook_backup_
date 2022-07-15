@@ -37,5 +37,8 @@ public class camera_move : MonoBehaviour
     void Update()
     {
         transform.position += new Vector3(0, speed * Time.deltaTime, 0); 
+        if (GameManager.gm.gameOver == true){
+            GetComponent<AudioSource>().volume = 0;            
+        }  
     }
 }

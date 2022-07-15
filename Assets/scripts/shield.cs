@@ -6,8 +6,7 @@ using UnityEngine.EventSystems;
 public class shield : MonoBehaviour
 {
     public camera_move mainCam;
-    public GameObject playerShield;
-    public GameObject boom;
+    public GameObject playerShield, boom;
     public Animator anim;
 
     public ParticleSystem ice;
@@ -20,11 +19,15 @@ public class shield : MonoBehaviour
     private Color defaultColor;
 
     public float itemTime = 5.0f;
+
+    private AudioSource Audio;
+    public AudioClip followShieldSound, stopEnemySound, powerUpSound, bigShieldSound, bloodSound;
    
     void Awake()
     {
         RD = GetComponent<Rigidbody2D>();
         SR = GetComponent<SpriteRenderer>();
+        Audio = GetComponent<AudioSource>();
         defaultColor = SR.color;
     }
 
@@ -89,13 +92,19 @@ public class shield : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "enemy") {
+            Audio.PlayOneShot(bloodSound, 0.8F);
+        }
+
         if (collision.gameObject.tag == "bigShield") {
             gameObject.transform.localScale = new Vector3(0.8f, 0.8f, 0);
+            Audio.PlayOneShot(bigShieldSound, 1.2F);
             Invoke("bigShieldOff", itemTime);
         } 
         else if (collision.gameObject.tag == "stronger") {
             gameObject.GetComponent<PointEffector2D>().forceMagnitude = 75;
             anim.SetBool("powerUp", true);
+            Audio.PlayOneShot(powerUpSound, 1.2F);
             Invoke("strongerOff", itemTime);
         } 
         else if (collision.gameObject.tag == "playerShield") {
@@ -104,15 +113,17 @@ public class shield : MonoBehaviour
         } 
         else if (collision.gameObject.tag == "boomer") {
             boom.SetActive(true); 
-            Invoke("boomerOff", 1f);
+            Invoke("boomerOff", 2f);
         }
         else if (collision.gameObject.tag == "followShield") {
             GameManager.gm.isChaseShield = true;
             anim.SetBool("followShield", true);
+            Audio.PlayOneShot(followShieldSound, 1.2F);
             Invoke("followShieldOff", itemTime);
         }
         else if (collision.gameObject.tag=="stopEnemy") {
             GameManager.gm.stopEnemy = true;
+            Audio.PlayOneShot(stopEnemySound, 1.2F);
             Invoke("stopEnemy", itemTime);
         }
     }

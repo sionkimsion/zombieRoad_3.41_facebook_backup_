@@ -13,11 +13,13 @@ public class GameManager : MonoBehaviour
     public bool isChaseShield = false;
     public bool stopEnemy = false;
     public bool gameOver = false;
-    public GameObject gameOverPNG;
-    public GameObject retry;
-    public GameObject bestScoreUI;
-    public GameObject gameOverUI;
+    public bool highScore = false;
+    public bool playAudio = false;
+    public GameObject gameOverPNG, retry, bestScoreUI, gameOverUI;
     public Animator PlayerAnim;
+
+    private AudioSource Audio;
+    public AudioClip highScoreSound, gameOverSound;
 
     void Awake()
     {
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     {
         initGame();
         bestScore.text = PlayerPrefs.GetFloat("bestScore", 0).ToString("N0").Replace(",", ""); 
+        Audio = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -49,6 +52,7 @@ public class GameManager : MonoBehaviour
         if (meter > PlayerPrefs.GetFloat("bestScore", 0)) {
             PlayerPrefs.SetFloat("bestScore", meter);
             bestScore.text = meter.ToString("N0").Replace(",", "");
+            highScore = true;
         }
 
         if (gameOver) {
@@ -57,6 +61,7 @@ public class GameManager : MonoBehaviour
             bestScoreUI.SetActive(true);
             gameOverUI.SetActive(true);
             PlayerAnim.SetBool("isDie", true);
+            //soundControl();
             Invoke("dead", 0.1f);
         }
     }
@@ -70,4 +75,13 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f;
     }
 
+    void soundControl() {
+        if (gameOver == true && highScore == true) {
+            Audio.PlayOneShot(highScoreSound, 1F);
+            playAudio=false;
+        } else if (gameOver == true) {
+            Audio.PlayOneShot(gameOverSound, 1F);
+            playAudio=false;            
+        }  
+    }
 }

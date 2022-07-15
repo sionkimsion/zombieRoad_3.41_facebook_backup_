@@ -31,7 +31,8 @@ public class fireDrum : MonoBehaviour
             SR.color = new Color(230/255f, 0, 0);
         } else if (!(collision.gameObject.tag == "shield")) {
             anim.SetBool("boom", true);
-            Destroy(gameObject, 0.5f);
+            this.gameObject.GetComponent<AudioSource>().Play();
+            Destroy(gameObject, 3f);
         }
     }
 
@@ -65,7 +66,7 @@ public class fireDrum : MonoBehaviour
 
         if (collision.gameObject.tag == "fireDrum") {
             anim.SetBool("boom", true);
-            Destroy(gameObject, 0.5f);
+            Destroy(gameObject, 3f);
         }
     }
 }
