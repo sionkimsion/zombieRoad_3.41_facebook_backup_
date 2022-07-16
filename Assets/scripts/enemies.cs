@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class enemies : MonoBehaviour {
     public bool isChase = false;
-    public ParticleSystem blood;
-    public ParticleSystem bubble;
+    public bool isIce = false;
+    public bool iceOnce = false;
+    public ParticleSystem blood, bubble, ice;
 
     GameObject player, shield;
     public float speed;
@@ -58,6 +59,8 @@ public class enemies : MonoBehaviour {
             Vector3 stay = gameObject.transform.position;
             stay = gameObject.transform.position;
             anim.SetBool("freeze", true);
+            isIce = true;
+            Invoke("iceBreak", 5.9f);
         } else if (!GameManager.gm.stopEnemy) {
             anim.SetBool("freeze", false);
             // TriggerEnter 시 player 따라감.
@@ -72,6 +75,20 @@ public class enemies : MonoBehaviour {
                     RD.position = Vector3.MoveTowards(RD.position, moveTo, speed * Time.deltaTime);
                 }
             }
+        }
+    }
+
+    void iceBreak ()
+    {
+        if (isIce) {
+            ice.transform.localScale = transform.localScale * 3.5f;
+            if(!iceOnce){
+                Instantiate(ice, transform.position, transform.rotation);
+            }
+            isIce = false;
+            iceOnce = true;
+        } else {
+            ice.Stop();
         }
     }
     

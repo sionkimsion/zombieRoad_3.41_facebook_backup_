@@ -21,7 +21,7 @@ public class shield : MonoBehaviour
     public float itemTime = 5.0f;
 
     private AudioSource Audio;
-    public AudioClip followShieldSound, stopEnemySound, powerUpSound, bigShieldSound, bloodSound;
+    public AudioClip followShieldSound, stopEnemySound, powerUpSound, bigShieldSound, bloodSound, bubbleShield;
    
     void Awake()
     {
@@ -104,11 +104,12 @@ public class shield : MonoBehaviour
         else if (collision.gameObject.tag == "stronger") {
             gameObject.GetComponent<PointEffector2D>().forceMagnitude = 75;
             anim.SetBool("powerUp", true);
-            Audio.PlayOneShot(powerUpSound, 1.2F);
+            Audio.PlayOneShot(powerUpSound, 1.5F);
             Invoke("strongerOff", itemTime);
         } 
         else if (collision.gameObject.tag == "playerShield") {
             playerShield.SetActive(true);
+            Audio.PlayOneShot(bubbleShield, 1.5F);
             Invoke("playerShieldOff", itemTime);
         } 
         else if (collision.gameObject.tag == "boomer") {
@@ -123,7 +124,7 @@ public class shield : MonoBehaviour
         }
         else if (collision.gameObject.tag=="stopEnemy") {
             GameManager.gm.stopEnemy = true;
-            Audio.PlayOneShot(stopEnemySound, 1.2F);
+            Audio.PlayOneShot(stopEnemySound, 1.8F);
             Invoke("stopEnemy", itemTime);
         }
     }

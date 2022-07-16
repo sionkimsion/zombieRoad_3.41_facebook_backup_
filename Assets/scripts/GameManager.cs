@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public bool stopEnemy = false;
     public bool gameOver = false;
     public bool highScore = false;
-    public bool playAudio = false;
+    private bool playAudio = true;
     public GameObject gameOverPNG, retry, bestScoreUI, gameOverUI;
     public Animator PlayerAnim;
 
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
             bestScoreUI.SetActive(true);
             gameOverUI.SetActive(true);
             PlayerAnim.SetBool("isDie", true);
-            //soundControl();
+            soundControl();
             Invoke("dead", 0.1f);
         }
     }
@@ -76,6 +76,9 @@ public class GameManager : MonoBehaviour
     }
 
     void soundControl() {
+        if (playAudio == false){
+            return;
+        }
         if (gameOver == true && highScore == true) {
             Audio.PlayOneShot(highScoreSound, 1F);
             playAudio=false;

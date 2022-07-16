@@ -5,8 +5,9 @@ using UnityEngine;
 public class Enemy_nMove : MonoBehaviour
 {
     public bool isChase = false;
-    public ParticleSystem blood;
-    public ParticleSystem bubble;
+    public bool isIce = false;
+    public bool iceOnce = false;
+    public ParticleSystem blood, bubble, ice;
     private SpriteRenderer SR;
     private Shader shaderGUItext;
     private Shader shaderSpritesDefault;
@@ -49,6 +50,8 @@ public class Enemy_nMove : MonoBehaviour
             Vector3 stay = gameObject.transform.position;
             stay = gameObject.transform.position;
             anim.SetBool("freeze", true);
+            isIce = true;
+            Invoke("iceBreak", 5.9f);
         } else {
             anim.SetBool("freeze", false);
             if (isChase){
@@ -63,6 +66,20 @@ public class Enemy_nMove : MonoBehaviour
                 }
             }
             
+        }
+    }
+
+    void iceBreak ()
+    {
+        if (isIce) {
+            ice.transform.localScale = transform.localScale * 3.5f;
+            if(!iceOnce){
+                Instantiate(ice, transform.position, transform.rotation);
+            }
+            isIce = false;
+            iceOnce = true;
+        } else {
+            ice.Stop();
         }
     }
 

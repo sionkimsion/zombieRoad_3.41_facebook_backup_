@@ -101,8 +101,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isChase: 0
+  isIce: 0
+  iceOnce: 0
   blood: {fileID: 7871364288532964892, guid: 9e153c811161bdb4da5d37bb294ace23, type: 3}
   bubble: {fileID: 7871364288532964892, guid: 8a60061561705f24fbac2ba0aa921372, type: 3}
+  ice: {fileID: 5368919208182483897, guid: bc8528b46d7be9f47a1cfdbf9822636f, type: 3}
   anim: {fileID: 1048630386205525374}
   speed: 1
   gravity: 0
