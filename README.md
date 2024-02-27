@@ -24,7 +24,7 @@ UnityEditor.BuildPlayerWindow+BuildMethodException: 4 errors
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 
 
-4. 일반 빌드 (64 이딴거 없이) 시 빌드 성공함
+4. 일반 빌드 (64 이런거 없이) 시 빌드 성공함
 
 Build completed with a result of 'Succeeded' in 65 seconds (65242 ms)
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
